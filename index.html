@@ -1,4 +1,42 @@
+<<<<<<< HEAD
  <div>Hi</div>
  <div>
 <p>This is a paragraph, yes it is</p>
  </div>
+=======
+<!doctype html>
+<html ng-app>
+<head>
+	<script src="http://code.angularjs.org/angular-1.0.0rc3.min.js"></script>
+	<script src="http://documentcloud.github.com/underscore/underscore-min.js"></script>
+	<script type="text/javascript" src="temperature.js"></script>
+	<link rel="stylesheet" type="text/css" href="styles/responsive.css">
+	<link rel="stylesheet" type="text/css" href="styles/temperature.css">
+</head>
+<body>
+<div ng-controller="RoomCtrl">
+	<h2>Average Temperate: {{getAverageTemperature()}}</h2>
+	<div class="row">
+		<ul class="span4">
+			<li ng-repeat="room in rooms">
+				<a href="#" ng-click="getRoom()">{{room.name}}</a>
+			</li>
+		</ul>
+		<div class="span8">
+			<div>Room Temperature:</div>
+		</div>
+	</div>
+	<!-- <ul>
+		<li ng-repeat="todo in todos">
+			<input type="checkbox" ng-model="todo.done">
+			<span class="done-{{todo.done}}">{{todo.text}}</span>
+		</li>
+	</ul>
+	<form>
+		<input type="text" ng-model="formTodoText" ng-model-instant>
+		<button ng-click="addTodo()">Add</button>
+	</form>
+	<button ng-click="clearCompleted()">Clear Completed</button> -->
+</div>
+</body>
+>>>>>>> 60b9de797b0a6851e00fdf26dd95289305bbfe87
