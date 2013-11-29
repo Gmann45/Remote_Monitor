@@ -32,7 +32,8 @@ static int timer=0;
       }
       
       temperature=temperature/20.0;           //Dividing the reading by amount of times averaged
-      temperature=((temperature*(5000.0/1024.0))-600.0)/10;
+      temperature=((temperature*(5000.0/1024.0))-600.0)/10; //Change to C
+      temperature=(temperature*1.8)+32; //Change temperature from C to F
       Serial.print("Temperature = ");
       Serial.println(temperature);       //Sends temperature in C to serial port
       
